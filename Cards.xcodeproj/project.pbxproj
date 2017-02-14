@@ -11,6 +11,8 @@
 		A102DACA1E53B51400F588F1 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102DAC91E53B51400F588F1 /* Deck.swift */; };
 		A102DACC1E53B51E00F588F1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102DACB1E53B51E00F588F1 /* Card.swift */; };
 		A102DAD11E53B82200F588F1 /* DeckOfCardsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102DAD01E53B82200F588F1 /* DeckOfCardsAPIManager.swift */; };
+		A102DAD31E53C1F300F588F1 /* GetCardFromDeckInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102DAD21E53C1F300F588F1 /* GetCardFromDeckInteractor.swift */; };
+		A102DAD51E53C51800F588F1 /* GetCardImageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A102DAD41E53C51800F588F1 /* GetCardImageInteractor.swift */; };
 		A1A26CE81E53A7C2005B71D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A26CE71E53A7C2005B71D3 /* AppDelegate.swift */; };
 		A1A26CEA1E53A7C2005B71D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A26CE91E53A7C2005B71D3 /* ViewController.swift */; };
 		A1A26CED1E53A7C2005B71D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A26CEB1E53A7C2005B71D3 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		A102DAC91E53B51400F588F1 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		A102DACB1E53B51E00F588F1 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A102DAD01E53B82200F588F1 /* DeckOfCardsAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckOfCardsAPIManager.swift; sourceTree = "<group>"; };
+		A102DAD21E53C1F300F588F1 /* GetCardFromDeckInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCardFromDeckInteractor.swift; sourceTree = "<group>"; };
+		A102DAD41E53C51800F588F1 /* GetCardImageInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCardImageInteractor.swift; sourceTree = "<group>"; };
 		A1A26CE41E53A7C2005B71D3 /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A26CE71E53A7C2005B71D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1A26CE91E53A7C2005B71D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 			isa = PBXGroup;
 			children = (
 				A102DAC71E53B4E900F588F1 /* DeckInteractor.swift */,
+				A102DAD21E53C1F300F588F1 /* GetCardFromDeckInteractor.swift */,
+				A102DAD41E53C51800F588F1 /* GetCardImageInteractor.swift */,
 			);
 			name = Interactors;
 			sourceTree = "<group>";
@@ -194,7 +200,9 @@
 				A1A26CEA1E53A7C2005B71D3 /* ViewController.swift in Sources */,
 				A102DACC1E53B51E00F588F1 /* Card.swift in Sources */,
 				A102DAC81E53B4E900F588F1 /* DeckInteractor.swift in Sources */,
+				A102DAD31E53C1F300F588F1 /* GetCardFromDeckInteractor.swift in Sources */,
 				A1A26CE81E53A7C2005B71D3 /* AppDelegate.swift in Sources */,
+				A102DAD51E53C51800F588F1 /* GetCardImageInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

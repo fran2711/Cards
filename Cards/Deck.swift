@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Deck{
+public class Deck {
     
     
 }

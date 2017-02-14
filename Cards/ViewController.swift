@@ -9,11 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var deck: Deck!
+    
 
     @IBOutlet weak var cardImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        paidCardPlaceholder()
+        paintCardPlaceholder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,17 +26,30 @@ class ViewController: UIViewController {
 
     
     @IBAction func deckButtonClicked(_ sender: Any) {
-        let di = DeckInteractor()
-        di.execute{ (deck: Deck) -> Void in
-        
+        DeckInteractor().execute{ (deck: Deck) in
+            print("DeckId is: " + deck.deckId)
+            self.deck = deck
         }
         
     }
     
     @IBAction func cardButtonClicked(_ sender: Any) {
+        
+        self.paintCardPlaceholder()
+        
+        GetCardFromDeckInteractor(deck: self.deck) .execute { (card) in
+            print("Card is: " + card.image)
+            
+            GetCardImageInteractor(card: card).execute(completion: { (image: UIImage) in
+                self.cardImageView.image = image
+            })
+            
+            
+        }
+        
     }
     
-    func paidCardPlaceholder() {
+    func paintCardPlaceholder() {
         assert(Thread.current == Thread.main)
         
         self.cardImageView.image = UIImage(named: "card")

@@ -10,13 +10,11 @@ import Foundation
 
 public class DeckInteractor {
     
-    public func execute(completion: (Deck) -> Void) {
+    public func execute(completion: @escaping (Deck) -> Void) {
         
-        // lanzo algo en background
-        let deck: Deck = Deck(deckId: "")
-        completion(deck)
-        
-        
+        DeckOfCardsAPIManager().downloadDeck{ (deck: Deck) in
+            assert(Thread.current == Thread.main)
+            completion(deck)
+        }
     }
-    
 }
