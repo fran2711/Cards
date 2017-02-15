@@ -36,7 +36,7 @@ public class DeckOfCardsAPIManager {
     
     
     public func downloadCard(deck: Deck, completion: @escaping (Card) -> Void) {
-        let urlString = "https://deckofcardsapi.com/api/deck/\(deck.deckID)/draw/?count=1"
+        let urlString = "https://deckofcardsapi.com/api/deck/\(deck.deckId)/draw/?count=1"
         
         // Lo paso a segundo plano
         DispatchQueue.global().async {
@@ -53,7 +53,7 @@ public class DeckOfCardsAPIManager {
                     let card = Card(code: firstCard["code"] as! String, suit: firstCard["suit"] as! String, image: firstCard["image"] as! String)
                     
                     DispatchQueue.main.async {
-                        completion(cards)
+                        completion(card)
                     }
                 } catch {
                     print("Error in downloadDeck" + error.localizedDescription)
